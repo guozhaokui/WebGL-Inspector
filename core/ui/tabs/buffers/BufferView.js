@@ -1,9 +1,11 @@
 define([
+        '../../../shared/Utilities',
         '../../Helpers',
         '../../shared/BufferPreview',
         '../../shared/SurfaceInspector',
         '../../shared/TraceLine',
     ], function (
+        util,
         helpers,
         BufferPreview,
         SurfaceInspector,
@@ -51,7 +53,7 @@ define([
                 return;
             }
 
-            this.previewer = new BufferPreview(this.canvas);
+            this.previewer = new BufferPreview(this.canvas, util.getContextType(this.window.context));
             this.gl = this.previewer.gl;
 
             this.canvas.width = 256;

@@ -67,7 +67,7 @@ define([
             if (this.previewer) {
                 return;
             }
-            this.previewer = new TexturePreviewGenerator(this.canvas, false);
+            this.previewer = new TexturePreviewGenerator(util.getContextType(this.window.context), this.canvas, false);
             this.gl = this.previewer.gl;
         };
         this.inspector.updatePreview = function () {
@@ -600,6 +600,10 @@ define([
                     height = parentHeight;
                     width = (parentHeight / ar);
                 }
+
+                width = Math.max(width, 32);
+                height = Math.max(height, 32);
+
                 dupeRoot.style.width = width + "px";
                 dupeRoot.style.height = height + "px";
 

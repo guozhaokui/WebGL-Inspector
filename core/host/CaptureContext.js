@@ -574,7 +574,6 @@ define([
             return rawgl;
         }
 
-        util.setWebGLVersion(rawgl);
         var wrapped = new CaptureContext(canvas, rawgl, options);
         rawgl.gliWrapper = wrapped;
 

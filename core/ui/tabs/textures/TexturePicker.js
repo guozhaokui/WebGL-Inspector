@@ -1,9 +1,11 @@
 define([
         '../../../shared/Base',
+        '../../../shared/Utilities',
         '../../shared/PopupWindow',
         '../../shared/TexturePreview',
     ], function (
         base,
+        util,
         PopupWindow,
         TexturePreviewGenerator
     ) {
@@ -18,7 +20,7 @@ define([
         var doc = this.browserWindow.document;
         var gl = context;
 
-        this.previewer = new TexturePreviewGenerator();
+        this.previewer = new TexturePreviewGenerator(util.getContextType(context));
         
         // Append textures already present
         var textures = context.resources.getTextures();

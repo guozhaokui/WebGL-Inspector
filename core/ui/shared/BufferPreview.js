@@ -8,7 +8,7 @@ define([
         util
     ) {
 
-    var BufferPreview = function (canvas) {
+    var BufferPreview = function (canvas, contextType) {
         this.document = canvas.ownerDocument;
         this.canvas = canvas;
         this.drawState = null;
@@ -19,7 +19,7 @@ define([
         expandLink.style.visibility = "collapse";
         canvas.parentNode.appendChild(expandLink);
 
-        var gl = this.gl = util.getWebGLContext(canvas);
+        var gl = this.gl = util.getWebGLContext(canvas, contextType);
         this.programInfo = shaderUtils.createProgramInfo(gl, [
             `
                 uniform mat4 u_projMatrix;

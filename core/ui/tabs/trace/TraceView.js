@@ -1,6 +1,7 @@
 define([
         '../../../shared/Info',
         '../../../shared/Settings',
+        '../../../shared/Utilities',
         '../../../replay/RedundancyChecker',
         '../../pixelhistory/PixelHistory',
         '../../shared/PopupWindow',
@@ -11,6 +12,7 @@ define([
     ], function (
         info,
         settings,
+        util,
         RedundancyChecker,
         PixelHistory,
         PopupWindow,
@@ -333,7 +335,7 @@ define([
             if (this.previewer) {
                 return;
             }
-            this.previewer = new TexturePreviewGenerator(this.canvas, true);
+            this.previewer = new TexturePreviewGenerator(util.getContextType(this.window.context), this.canvas, true);
             this.gl = this.previewer.gl;
         };
         this.inspector.updatePreview = function () {
@@ -387,7 +389,7 @@ define([
 
         var canvas = this.inspector.canvas;
         canvas.style.display = "";
-        w.controller.setOutput(canvas);
+        w.controller.setOutput(canvas, util.getContextType(context));
         // TODO: watch for parent canvas size changes and update
         canvas.width = this.window.context.canvas.width;
         canvas.height = this.window.context.canvas.height;
@@ -424,7 +426,10 @@ define([
         this.frame = frame;
 
         // Check for redundancy, if required
-        RedundancyChecker.checkFrame(frame);
+        if (!this.redundancyChecker) {
+          this.redundancyChecker = new RedundancyChecker(util.getContextType(gl));
+        }
+        this.redundancyChecker.run(frame);
 
         // Find interesting calls
         var bindFramebufferCalls = [];

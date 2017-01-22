@@ -60,24 +60,25 @@ define([
     DrawInfo.prototype.demandSetup = function () {
         // This happens around here to work around some Chromium issues with
         // creating WebGL canvases in differing documents
-
         if (this.gl) {
             return;
         }
 
+
+        const contextType = util.getContextType(this.context);
         var doc = this.browserWindow.document;
 
         // TODO: move to shared code
         function prepareCanvas(canvas) {
             var frag = document.createDocumentFragment();
             frag.appendChild(canvas);
-            var gl = util.getWebGLContext(canvas);
+            var gl = util.getWebGLContext(canvas, contextType);
             return gl;
         };
         this.canvas = document.createElement("canvas");
         this.gl = prepareCanvas(this.canvas);
 
-        this.texturePreviewer = new TexturePreviewGenerator();
+        this.texturePreviewer = new TexturePreviewGenerator(contextType);
 
         var bufferCanvas = this.bufferCanvas = doc.createElement("canvas");
         bufferCanvas.className = "gli-reset drawinfo-canvas";
@@ -87,7 +88,7 @@ define([
         bufferCanvasOuter.style.position = "relative";
         bufferCanvasOuter.appendChild(bufferCanvas);
 
-        this.bufferPreviewer = new BufferPreview(bufferCanvas);
+        this.bufferPreviewer = new BufferPreview(bufferCanvas, contextType);
         this.bufferPreviewer.setupDefaultInput();
     };
 

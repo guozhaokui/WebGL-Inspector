@@ -158,7 +158,7 @@ define([
                 lastX = x;
                 lastY = y;
 
-                var gl = util.getWebGLContext(self.canvas);
+                var gl = util.getWebGLContext(self.canvas, util.getContextType(context));
                 var pixel = new Uint8Array(4);
                 gl.readPixels(x, self.canvas.height - y - 1, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, pixel);
                 var r = pixel[0];

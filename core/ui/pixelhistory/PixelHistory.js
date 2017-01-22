@@ -44,7 +44,7 @@ define([
         function prepareCanvas(canvas) {
             var frag = doc.createDocumentFragment();
             frag.appendChild(canvas);
-            var gl = util.getWebGLContext(canvas, context.attributes, null);
+            var gl = util.getWebGLContext(canvas, util.getContextType(context), context.attributes);
             return gl;
         };
         this.canvas1 = doc.createElement("canvas");

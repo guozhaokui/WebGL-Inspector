@@ -15,11 +15,14 @@ define([
 
     const util = {};
 
-    util.setWebGLVersion = function( gl ) {
-        util.useWebGL2 = util.isWebGL2(gl);
-    }
+    util.getContextType = function(gl) {
+        return util.isWebGL2(gl) ? "webgl2" : "webgl";
+    };
 
-    util.getWebGLContext = function (canvas, baseAttrs, attrs) {
+    util.getWebGLContext = function (canvas, contextType, baseAttrs, attrs) {
+        if (!contextType) {
+          console.error("missing context type!");
+        }
         var finalAttrs = {
             preserveDrawingBuffer: true
         };
@@ -41,7 +44,7 @@ define([
         }
 
         function getContext(contextName) {
-          var gl = null;
+          let gl;
           try {
               if (canvas.getContextRaw) {
                   gl = canvas.getContextRaw(contextName, finalAttrs);
@@ -55,15 +58,13 @@ define([
 
         // WebGL2 should **mostly** be compatible with webgl. At least at the start
         // Otherwise we need to some how know what kind of context we need (1 or 2)
-        let gl;
-        if (util.useWebGL2) {
-            gl = getContext("webgl2");
-        } else {
-            gl = getContext("webgl") || getContext("experimental-webgl");
+        let gl = getContext(contextType);
+        if (!gl && contextType === "webgl") {
+            gl = getContext("experimental-webgl");
         }
         if (!gl) {
           // ?
-          alert("Unable to get WebGL context: " + e);
+          alert("Unable to get WebGL context");
         }
 
         if (gl) {

@@ -4,11 +4,11 @@ define([
         util
     ) {
 
-    var RedundancyChecker = function () {
+    var RedundancyChecker = function (contextType) {
         function prepareCanvas(canvas) {
             var frag = document.createDocumentFragment();
             frag.appendChild(canvas);
-            var gl = util.getWebGLContext(canvas);
+            var gl = util.getWebGLContext(canvas, contextType);
             return gl;
         };
         this.canvas = document.createElement("canvas");
@@ -859,15 +859,6 @@ define([
 
         frame.cleanup(gl);
         frame.switchMirrors();
-    };
-
-    var cachedChecker = null;
-    RedundancyChecker.checkFrame = function (frame) {
-        if (!cachedChecker) {
-            cachedChecker = new RedundancyChecker();
-        }
-
-        cachedChecker.run(frame);
     };
 
     return RedundancyChecker;

@@ -277,7 +277,7 @@ define([
         return tex;
     }
 
-    var TexturePreviewGenerator = function (canvas, useMirror) {
+    var TexturePreviewGenerator = function (contextType, canvas, useMirror) {
         this.useMirror = useMirror;
         if (canvas) {
             // Re-use the canvas passed in
@@ -292,7 +292,7 @@ define([
         }
         this.canvas = canvas;
 
-        var gl = this.gl = util.getWebGLContext(canvas);
+        var gl = this.gl = util.getWebGLContext(canvas, contextType);
         this.programInfos = {};
         this.normMinMaxTextures = {};
 

@@ -43,11 +43,11 @@ define([
         this.stepCompleted = new EventSource("stepCompleted");
     };
 
-    Controller.prototype.setOutput = function (canvas) {
+    Controller.prototype.setOutput = function (canvas, contextType) {
         this.output.canvas = canvas;
 
         // TODO: pull attributes from source somehow?
-        var gl = this.output.gl = util.getWebGLContext(canvas, null, null);
+        var gl = this.output.gl = util.getWebGLContext(canvas, contextType);
         info.initialize(gl);
     };
 
