@@ -13,6 +13,7 @@ define([
         cssLoader,
         captureContext
     ) {
+    "use strict";
 
     function requestCapture(context) {
         context.requestCapture(function (context, frame) {

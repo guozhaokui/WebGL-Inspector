@@ -1,4 +1,5 @@
 define([], function() {
+    "use strict";
 
     function injectCSS(filename, injectState) {
         var doc = injectState.window.document;

@@ -5,6 +5,7 @@ define([
         EventSource,
         ResourceVersion
     ) {
+    "use strict";
 
     // Incrmeents with each resource allocated
     var uniqueId = 0;

@@ -11,6 +11,7 @@ define([
         SurfaceInspector,
         traceLine
     ) {
+    "use strict";
 
     function shouldShowPreview(gl, buffer, version) {
         return !!buffer && (buffer.type == gl.ARRAY_BUFFER) && !!version.structure && !!version.lastDrawState;

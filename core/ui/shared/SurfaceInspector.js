@@ -9,6 +9,7 @@ define([
         SplitterBar,
         util
     ) {
+    "use strict";
 
     // options: {
     //     splitterKey: 'traceSplitter' / etc

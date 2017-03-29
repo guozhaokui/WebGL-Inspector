@@ -11,6 +11,7 @@ define([
         LeftListing,
         BufferView
     ) {
+    "use strict";
 
     var BuffersTab = function (w) {
         var outer = Tab.divClass("window-right-outer");

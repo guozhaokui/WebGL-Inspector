@@ -1,4 +1,5 @@
 define(function() {
+    "use strict";
 
     function subclass(parent, child, args) {
         parent.apply(child, args);

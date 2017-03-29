@@ -5,6 +5,7 @@ define([
         base,
         EventSource
     ) {
+    "use strict";
 
     var LeftListing = function (w, elementRoot, cssBase, itemGenerator) {
         var self = this;

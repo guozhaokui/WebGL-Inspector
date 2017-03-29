@@ -3,6 +3,7 @@ define([
     ], function (
         EventSource
     ) {
+    "use strict";
 
     function installFrameTerminatorExtension(gl) {
         var ext = {};

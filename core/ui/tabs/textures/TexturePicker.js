@@ -9,6 +9,7 @@ define([
         PopupWindow,
         TexturePreviewGenerator
     ) {
+    "use strict";
 
     var TexturePicker = function (context, name) {
         base.subclass(PopupWindow, this, [context, name, "Texture Browser", 610, 600]);

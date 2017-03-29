@@ -3,6 +3,7 @@ define([
     ], function (
         util
     ) {
+    "use strict";
 
     var stateParameters = null;
     function setupStateParameters(gl) {

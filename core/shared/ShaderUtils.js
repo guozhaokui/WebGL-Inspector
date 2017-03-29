@@ -3,6 +3,7 @@ define([
     ], function(
         glc
     ) {
+    "use strict";
 
     /**
      * Returns the corresponding bind point for a given sampler type

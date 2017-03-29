@@ -1,4 +1,5 @@
 define(function () {
+    "use strict";
 
     var PerformanceView = function (w, elementRoot) {
         var self = this;

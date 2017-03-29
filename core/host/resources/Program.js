@@ -8,6 +8,7 @@ define([
         glc,
         util,
         Resource) {
+    "use strict";
 
     var Program = function (gl, frameNumber, stack, target) {
         base.subclass(Resource, this, [gl, frameNumber, stack, target]);

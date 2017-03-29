@@ -7,6 +7,7 @@ define([
         info,
         util
     ) {
+    "use strict";
 
     function generateFunctionDisplay(context, call, el) {
         var sig = "";

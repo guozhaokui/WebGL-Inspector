@@ -1,4 +1,6 @@
 define(function () {
+    "use strict";
+
     var SplitterBar = function (parentElement, direction, minValue, maxValue, customStyle, changeCallback) {
         var self = this;
         var doc = parentElement.ownerDocument;

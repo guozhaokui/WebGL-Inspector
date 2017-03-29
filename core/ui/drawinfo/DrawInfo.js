@@ -19,6 +19,7 @@ define([
         traceLine,
         helpers
     ) {
+    "use strict";
 
     function padValue(v, l) {
         v = String(v);

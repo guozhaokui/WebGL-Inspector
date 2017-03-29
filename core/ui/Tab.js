@@ -3,6 +3,7 @@ define([
     ], function (
         EventSource
     ) {
+    "use strict";
 
     var Tab = function (w, container, name) {
         this.name = name;

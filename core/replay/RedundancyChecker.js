@@ -3,6 +3,7 @@ define([
     ], function (
         util
     ) {
+    "use strict";
 
     var RedundancyChecker = function (contextType) {
         function prepareCanvas(canvas) {

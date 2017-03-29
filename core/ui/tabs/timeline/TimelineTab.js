@@ -5,6 +5,7 @@ define([
         Tab,
         TimelineView
     ) {
+    "use strict";
 
     var TimelineTab = function (w) {
         var outer = Tab.divClass('window-right-outer');

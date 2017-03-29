@@ -21,6 +21,7 @@ define([
         traceLine,
         TraceListing
     ) {
+    "use strict";
 
     var TraceMinibar = function (view, w, elementRoot) {
         var self = this;

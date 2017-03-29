@@ -11,6 +11,7 @@ define([
         LeftListing,
         VertexArrayView
     ) {
+    "use strict";
 
     var VertexArraysTab = function (w) {
         var outer = Tab.divClass("window-right-outer");

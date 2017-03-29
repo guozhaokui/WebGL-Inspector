@@ -4,6 +4,7 @@ define([
     ], function (
         glc,
         util) {
+    "use strict";
 
     const info = {};
 

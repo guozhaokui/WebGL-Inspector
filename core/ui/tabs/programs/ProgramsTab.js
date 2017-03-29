@@ -11,6 +11,7 @@ define([
         LeftListing,
         ProgramView
     ) {
+    "use strict";
 
     var ProgramsTab = function (w) {
         var self = this;

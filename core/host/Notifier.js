@@ -1,4 +1,6 @@
 define(function () {
+    "use strict";
+
     var Notifier = function (captureContext) {
         this.captureContext = captureContext;
         this.div = document.createElement("div");

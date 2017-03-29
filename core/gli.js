@@ -25,6 +25,7 @@ define([
 ], function(
     captureContext,
     HostUI) {
+    "use strict";
 
     window.gli = window.gli || {};
     //window.gli.host = window.gli.host || {};

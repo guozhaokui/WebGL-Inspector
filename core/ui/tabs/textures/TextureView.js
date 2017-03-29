@@ -21,6 +21,7 @@ define([
         TexturePreviewGenerator,
         traceLine
     ) {
+    "use strict";
 
     var TextureView = function (w, elementRoot) {
         var self = this;

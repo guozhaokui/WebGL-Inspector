@@ -23,6 +23,7 @@ define([
         ProgramsTab,
         VertexArraysTab
     ) {
+    "use strict";
 
     var Toolbar = function (w) {
         var self = this;

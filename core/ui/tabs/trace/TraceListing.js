@@ -11,6 +11,7 @@ define([
         PopupWindow,
         traceLine
     ) {
+    "use strict";
 
     var TraceListing = function (view, w, elementRoot) {
         var self = this;

@@ -7,6 +7,7 @@ define([
         LeftListing,
         TraceView
     ) {
+    "use strict";
 
     var TraceTab = function (w) {
         var outer = Tab.divClass("window-right-outer");

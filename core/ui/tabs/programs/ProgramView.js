@@ -9,6 +9,7 @@ define([
         SurfaceInspector,
         traceLine
     ) {
+    "use strict";
 
     var ProgramView = function (w, elementRoot) {
         var self = this;

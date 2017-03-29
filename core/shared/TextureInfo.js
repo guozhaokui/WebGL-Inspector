@@ -5,6 +5,7 @@ define([
         glc,
         util
     ) {
+    "use strict";
 
     const texTargetInfo = {}
     texTargetInfo[glc.TEXTURE_2D]                  = { target: glc.TEXTURE_2D,       query: glc.TEXTURE_BINDING_2D, };

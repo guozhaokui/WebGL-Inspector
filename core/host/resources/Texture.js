@@ -10,6 +10,7 @@ define([
         textureInfo,
         util,
         Resource) {
+    "use strict";
 
     var Texture = function (gl, frameNumber, stack, target) {
         base.subclass(Resource, this, [gl, frameNumber, stack, target]);

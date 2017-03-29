@@ -1,4 +1,5 @@
 define(function() {
+    "use strict";
 
     var Settings = function () {
         this.global = {

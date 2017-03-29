@@ -8,6 +8,8 @@ define([
         glc,
         util,
         StateSnapshot) {
+    "use strict";
+
 
     var CallType = {
         MARK: 0,

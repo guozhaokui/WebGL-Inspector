@@ -5,6 +5,7 @@ define([
         cssLoader,
         captureContext
     ) {
+    "use strict";
 
     var PopupWindow = function (context, name, title, defaultWidth, defaultHeight) {
         var self = this;

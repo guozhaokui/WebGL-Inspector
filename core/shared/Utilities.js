@@ -12,6 +12,7 @@ define([
         extensions,
         hacks
     ) {
+    "use strict";
 
     const util = {};
 

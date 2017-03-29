@@ -4,6 +4,7 @@ define([
     ], function (
         base,
         Resource) {
+    "use strict";
 
     var Shader = function (gl, frameNumber, stack, target, args) {
         base.subclass(Resource, this, [gl, frameNumber, stack, target]);

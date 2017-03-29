@@ -1,4 +1,5 @@
 define(function () {
+    "use strict";
 
     var Counter = function (name, description, unit, color, enabledByDefault) {
         this.name = name;

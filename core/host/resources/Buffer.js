@@ -6,6 +6,7 @@ define([
         base,
         util,
         Resource) {
+    "use strict";
 
     var Buffer = function (gl, frameNumber, stack, target) {
         base.subclass(Resource, this, [gl, frameNumber, stack, target]);

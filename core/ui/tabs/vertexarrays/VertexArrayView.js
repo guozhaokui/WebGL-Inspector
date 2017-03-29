@@ -5,6 +5,7 @@ define([
         helpers,
         traceLine
     ) {
+    "use strict";
 
     var VertexArrayView = function (w, elementRoot) {
         var self = this;

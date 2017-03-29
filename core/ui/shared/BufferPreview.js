@@ -7,6 +7,7 @@ define([
         shaderUtils,
         util
     ) {
+    "use strict";
 
     var BufferPreview = function (canvas, contextType) {
         this.document = canvas.ownerDocument;

@@ -15,6 +15,7 @@ define([
         traceLine,
         helpers
     ) {
+    "use strict";
 
     var PixelHistory = function (context, name) {
         base.subclass(PopupWindow, this, [context, name, "Pixel History", 926, 600]);

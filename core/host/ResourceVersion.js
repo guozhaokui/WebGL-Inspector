@@ -7,6 +7,7 @@ define([
         util,
         Frame
     ) {
+    "use strict";
 
     var ResourceVersion = function () {
         this.versionNumber = 0;

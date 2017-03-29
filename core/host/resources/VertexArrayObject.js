@@ -4,6 +4,7 @@ define([
     ], function (
         base,
         Resource) {
+    "use strict";
 
     var VertexArray = function (gl, frameNumber, stack, target) {
         base.subclass(Resource, this, [gl, frameNumber, stack, target]);

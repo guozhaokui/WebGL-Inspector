@@ -15,6 +15,7 @@ define([
         TexturePicker,
         TextureView
     ) {
+    "use strict";
 
     const textureItemCSSClassRE = /texture-item-\w+$/;
 

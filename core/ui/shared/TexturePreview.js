@@ -17,6 +17,7 @@ define([
         util,
         Resource
     ) {
+    "use strict";
 
     function isSampler3D(samplerType) {
         const is3D = samplerType === "sampler3D" || samplerType === "sampler2DArray";

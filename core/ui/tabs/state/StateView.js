@@ -7,6 +7,7 @@ define([
         StateSnapshot,
         helpers
     ) {
+    "use strict";
 
     var StateView = function (w, elementRoot) {
         var self = this;

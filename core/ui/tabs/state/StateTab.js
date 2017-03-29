@@ -5,6 +5,7 @@ define([
         Tab,
         StateView
     ) {
+    "use strict";
 
     var divClass = Tab.divClass;
 

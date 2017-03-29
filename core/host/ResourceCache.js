@@ -25,6 +25,7 @@ define([
         VertexArray,
         VertexArrayObjectOES
     ) {
+    "use strict";
 
     var resourceCtors = {
       Buffer: Buffer,

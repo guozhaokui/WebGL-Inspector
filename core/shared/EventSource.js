@@ -1,4 +1,5 @@
 define(function () {
+    "use strict";
 
     var setTimeout = window.setTimeout.bind(window);
 

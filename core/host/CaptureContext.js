@@ -25,6 +25,8 @@ define([
         ResourceCache,
         Statistics
     ) {
+    "use strict";
+
     const api = {};
 
     var dynamicContextProperties = {
@@ -198,7 +200,6 @@ define([
 
         this.notifier = new Notifier(api);
 
-        this.rawgl.canvas = canvas;
         info.initialize(this.rawgl);
 
         this.attributes = rawgl.getContextAttributes ? rawgl.getContextAttributes() : {};

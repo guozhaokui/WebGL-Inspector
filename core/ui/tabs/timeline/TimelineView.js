@@ -3,6 +3,7 @@ define([
     ], function (
         settings
     ) {
+    "use strict";
 
     var TimelineView = function (w, elementRoot) {
         var self = this;

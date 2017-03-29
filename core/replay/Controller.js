@@ -9,6 +9,7 @@ define([
         util,
         StateSnapshot
     ) {
+    "use strict";
 
     function clearToZeroAndRestoreParams(gl, bufferBits) {
         const oldColorMask = gl.getParameter(gl.COLOR_WRITEMASK);

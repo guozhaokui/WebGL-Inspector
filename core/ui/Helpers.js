@@ -7,6 +7,8 @@ define([
         info,
         util
     ) {
+    "use strict";
+
     function appendbr(el) {
         var br = document.createElement("br");
         el.appendChild(br);
