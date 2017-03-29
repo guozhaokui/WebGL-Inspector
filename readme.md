@@ -1,3 +1,39 @@
+BETA!
+=====
+
+This is a fork of [the WebGL-Inspector](http://benvanik.github.com/WebGL-Inspector/)
+with some small progress on supporting WebGL2. It is a work in progress. No promises
+that it works at all.
+
+It's changed from the original WebGL-Inspector in that it uses babel during building
+allowing ES6 features to be used and still support IE11 in embedded mode. During dev
+you need an ES6 compliant browser
+
+Development
+-----------
+
+* install node.js
+* clone the repo
+* cd to the repo
+* npm install
+
+Then serve the root folder of the repo with the server of your choice
+and run one of the samples with embedded in the name.
+
+Building
+--------
+
+    npm run build
+
+builds the plugin (concats the file through babel)
+
+    npm run compress
+
+genrates zips in core/extensions/web-extension and core/extensions/webg-extensions/release
+
+---
+
+
 About
 ====================
 WebGL Inspector is a tool inspired by [gDEBugger](http://www.gremedy.com/) and [PIX](http://msdn.microsoft.com/en-us/library/ee417062.aspx)
