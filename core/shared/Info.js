@@ -231,6 +231,8 @@ define([
         "RGBA16I",
         "RGBA32I",
         "RGBA32UI",
+        "RGBA16F",
+        "RGBA32F"
     ];
     const depthRenderableFormats = [
         "DEPTH_COMPONENT16",
