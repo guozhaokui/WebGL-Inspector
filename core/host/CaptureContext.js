@@ -278,6 +278,7 @@ define([
         // the proper places, such as Info.js for enum values and the resource
         // system for new resources
         var validExts = [
+            'EXT_color_buffer_float',
             'GLI_frame_terminator',
             'OES_texture_float',
             'OES_texture_half_float',

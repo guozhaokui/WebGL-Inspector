@@ -79,8 +79,8 @@ define([
         t[glc.RGB5_A1]            = { colorType: "0-1",   format: glc.RGBA,            colorRenderable: true,  textureFilterable: true,  bytesPerElement: [4, 2, 4],  type: [glc.UNSIGNED_BYTE, glc.UNSIGNED_SHORT_5_5_5_1, glc.UNSIGNED_INT_2_10_10_10_REV], };
         t[glc.RGBA4]              = { colorType: "0-1",   format: glc.RGBA,            colorRenderable: true,  textureFilterable: true,  bytesPerElement: [4, 2],     type: [glc.UNSIGNED_BYTE, glc.UNSIGNED_SHORT_4_4_4_4], };
         t[glc.RGB10_A2]           = { colorType: "0-1",   format: glc.RGBA,            colorRenderable: true,  textureFilterable: true,  bytesPerElement:  4,         type: glc.UNSIGNED_INT_2_10_10_10_REV, };
-        t[glc.RGBA16F]            = { colorType: "float", format: glc.RGBA,            colorRenderable: false, textureFilterable: true,  bytesPerElement: [8, 16],    type: [glc.HALF_FLOAT, glc.FLOAT], };
-        t[glc.RGBA32F]            = { colorType: "float", format: glc.RGBA,            colorRenderable: false, textureFilterable: false, bytesPerElement: 16,         type: glc.FLOAT, };
+        t[glc.RGBA16F]            = { colorType: "float", format: glc.RGBA,            colorRenderable: true, textureFilterable: true,  bytesPerElement: [8, 16],    type: [glc.HALF_FLOAT, glc.FLOAT], };
+        t[glc.RGBA32F]            = { colorType: "float", format: glc.RGBA,            colorRenderable: true, textureFilterable: false, bytesPerElement: 16,         type: glc.FLOAT, };
         t[glc.RGBA8UI]            = { colorType: "uint",  format: glc.RGBA_INTEGER,    colorRenderable: true,  textureFilterable: false, bytesPerElement:  4,         type: glc.UNSIGNED_BYTE, };
         t[glc.RGBA8I]             = { colorType: "int",   format: glc.RGBA_INTEGER,    colorRenderable: true,  textureFilterable: false, bytesPerElement:  4,         type: glc.BYTE, };
         t[glc.RGB10_A2UI]         = { colorType: "uint",  format: glc.RGBA_INTEGER,    colorRenderable: true,  textureFilterable: false, bytesPerElement:  4,         type: glc.UNSIGNED_INT_2_10_10_10_REV, };
