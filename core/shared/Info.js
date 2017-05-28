@@ -1233,7 +1233,7 @@ define([
             new FunctionInfo(gl, "clearBufferiv", null,  null),  // handled specially below
             new FunctionInfo(gl, "clearBufferuiv", null,  null),  // handled specially below
             /* Query Objects */
-            new FunctionInfo(gl, "createQuery", null, [,
+            new FunctionInfo(gl, "createQuery", null, [
             ]),
             new FunctionInfo(gl, "deleteQuery", null, [
                 new FunctionParam(gl, "query", new UIInfo(UIType.OBJECT)),
@@ -1258,7 +1258,7 @@ define([
             ]),
 
             /* Sampler Objects */
-            new FunctionInfo(gl, "createSampler", null, [,
+            new FunctionInfo(gl, "createSampler", null, [
             ]),
             new FunctionInfo(gl, "deleteSampler", null, [
                 new FunctionParam(gl, "sampler", new UIInfo(UIType.OBJECT)),
@@ -1312,7 +1312,7 @@ define([
             ]),
 
             /* Transform Feedback */
-            new FunctionInfo(gl, "createTransformFeedback", null, [,
+            new FunctionInfo(gl, "createTransformFeedback", null, [
             ]),
             new FunctionInfo(gl, "deleteTransformFeedback", null, [
                 new FunctionParam(gl, "tf", new UIInfo(UIType.OBJECT)),
@@ -1320,14 +1320,14 @@ define([
             new FunctionInfo(gl, "isTransformFeedback", null, [
                 new FunctionParam(gl, "tf", new UIInfo(UIType.OBJECT)),
             ]),
-            new FunctionInfo(gl, "bindTransformFeedback ", null, [
+            new FunctionInfo(gl, "bindTransformFeedback", null, [
                 new FunctionParam(gl, "target", new UIInfo(UIType.ENUM, ["TRANSFORM_FEEDBACK"])),
                 new FunctionParam(gl, "tf", new UIInfo(UIType.Object)),
             ]),
             new FunctionInfo(gl, "beginTransformFeedback", null, [
                 new FunctionParam(gl, "primitiveMode", new UIInfo(UIType.ENUM, ["POINTS", "LINES", "TRIANGLES"])),
             ]),
-            new FunctionInfo(gl, "endTransformFeedback", null, [,
+            new FunctionInfo(gl, "endTransformFeedback", null, [
             ]),
             new FunctionInfo(gl, "transformFeedbackVaryings", null, [
                 new FunctionParam(gl, "program", new UIInfo(UIType.OBJECT)),
@@ -1338,9 +1338,9 @@ define([
                 new FunctionParam(gl, "program", new UIInfo(UIType.OBJECT)),
                 new FunctionParam(gl, "index", new UIInfo(UIType.ULONG)),
             ]),
-            new FunctionInfo(gl, "pauseTransformFeedback", null, [,
+            new FunctionInfo(gl, "pauseTransformFeedback", null, [
             ]),
-            new FunctionInfo(gl, "resumeTransformFeedback", null, [,
+            new FunctionInfo(gl, "resumeTransformFeedback", null, [
             ]),
 
             /* Uniform Buffer Objects and Transform Feedback Buffers */
@@ -1389,7 +1389,7 @@ define([
             ]),
 
             /* Vertex Array Objects */
-            new FunctionInfo(gl, "createVertexArray", null, [,
+            new FunctionInfo(gl, "createVertexArray", null, [
             ]),
             new FunctionInfo(gl, "deleteVertexArray", null, [
                 new FunctionParam(gl, "vertexArray", new UIInfo(UIType.OBJECT)),
