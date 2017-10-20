@@ -1,10 +1,10 @@
-
-1. htmlµÄheadÖĞ¼Ó
+ï»¿
+1. htmlçš„headä¸­åŠ 
 ```html
         <script type="text/javascript" src="core/lib/gli.all.js"></script>
         <link rel="stylesheet" href="core/lib/gli.all.css"></head>
 ```
-2. ´´½¨webglctxÖ®Ç°
+2. åˆ›å»ºwebglctxä¹‹å‰
 ```javascript
 if(window['gli']) gli.setupContext();
 ```
